@@ -5,7 +5,7 @@
     <ProjectGuid>{2EABFAFA-B6E5-43EB-948F-62FCECCBCCC0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <NoStandardLibraries>false</NoStandardLibraries>
-    <AssemblyName>ClassLibrary</AssemblyName>
+    <AssemblyName>MuzzyUtils</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -297,18 +297,6 @@
   <ItemGroup>
     <Compile Include="HarmonyPatch.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include=".vs\MoodBarPatch\v15\.suo" />
-    <None Include=".vs\slnx.sqlite" />
-    <None Include=".vs\VSWorkspaceState.json" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include=".vs\ColoredMoodBar\v15\" />
-  </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
-  <ProjectExtensions>
-    <VisualStudio AllowExistingFolder="true" />
-  </ProjectExtensions>
   <PropertyGroup>
     <PostBuildEvent>..\..\..\..\RimWorldWin64 -quicktest</PostBuildEvent>
   </PropertyGroup>

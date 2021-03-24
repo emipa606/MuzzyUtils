@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Muzzy-Utils</name>
+  <author>Muzzy</author>
+  <url>http://muzzy.net</url>
+  <description>Muzzy's RimWorld utilities. Adds stockpile filter for fresh items and mood-indicators to the colonist bar.</description>
+  <targetVersion>0.15.1279</targetVersion>
+</ModMetaData>
