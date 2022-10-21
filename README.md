@@ -1,6 +1,6 @@
 # MuzzyUtils
 
-![Image](https://i.imgur.com/WAEzk68.png)
+![Image](https://i.imgur.com/buuPQel.png)
 
 Update of Muzzys mod
 https://steamcommunity.com/sharedfiles/filedetails/?id=739305991
@@ -9,16 +9,16 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=739305991
 - Added in this mod is visible break-levels and the current mood-target
 - Removed the fresh-items stockpile filter since its in vanilla
 
-![Image](https://i.imgur.com/7Gzt3Rg.png)
+![Image](https://i.imgur.com/pufA0kM.png)
 
 	
-![Image](https://i.imgur.com/NOW7jU1.png)
+![Image](https://i.imgur.com/Z4GOv8H.png)
 
-Muzzy&apos;s RimWorld utilities. Adds stockpile filter for fresh items and mood-indicators to the colonist bar.
+Muzzy's RimWorld utilities. Adds stockpile filter for fresh items and mood-indicators to the colonist bar.
 
 Ludeon forum thread for the mod (with link to non-Steam version): https://ludeon.com/forums/index.php?topic=23187
 
-![Image](https://i.imgur.com/Rs6T6cr.png)
+![Image](https://i.imgur.com/PwoNOj4.png)
 
 
 
@@ -28,6 +28,7 @@ Ludeon forum thread for the mod (with link to non-Steam version): https://ludeon
 -  For best support, please use the Discord-channel for error-reporting.
 -  Do not report errors by making a discussion-thread, I get no notification of that.
 -  If you have the solution for a problem, please post it to the GitHub repository.
+
 
 
 
