@@ -49,15 +49,16 @@ public class ColonistBarColonistDrawer_DrawColonist_Patch
         if (mood != null && mentalBreaker != null)
         {
             var moodBorderRect = rect.ContractedBy(-1f);
-            if (mood.CurLevelPercentage <= mentalBreaker.BreakThresholdExtreme)
+            var currentMood = mood.CurLevelPercentage;
+            if (currentMood <= mentalBreaker.BreakThresholdExtreme)
             {
                 GUI.DrawTexture(moodBorderRect, Main.MoodExtremeCrossedTex);
             }
-            else if (mood.CurLevelPercentage <= mentalBreaker.BreakThresholdMajor)
+            else if (currentMood <= mentalBreaker.BreakThresholdMajor)
             {
                 GUI.DrawTexture(moodBorderRect, Main.MoodMajorCrossedTex);
             }
-            else if (mood.CurLevelPercentage <= mentalBreaker.BreakThresholdMinor)
+            else if (currentMood <= mentalBreaker.BreakThresholdMinor)
             {
                 GUI.DrawTexture(moodBorderRect, Main.MoodMinorCrossedTex);
             }
@@ -65,7 +66,7 @@ public class ColonistBarColonistDrawer_DrawColonist_Patch
             GUI.DrawTexture(rect, ColonistBar.BGTex);
             var moodRect = rect.ContractedBy(2f);
             var position = moodRect;
-            var num = position.height * colonist.needs.mood.CurLevelPercentage;
+            var num = position.height * currentMood;
             position.yMin = position.yMax - num;
             position.height = num;
 
@@ -148,13 +149,13 @@ public class ColonistBarColonistDrawer_DrawColonist_Patch
             : Find.Selector.SelectedObjects.Contains(colonist);
         if (isColonistSelected && !WorldRendererUtility.WorldRenderedNow)
         {
-            Main.drawSelectionOverlayOnGUIMethod.Invoke(__instance, new object[] { colonist, rect2 });
+            Main.drawSelectionOverlayOnGUIMethod.Invoke(__instance, [colonist, rect2]);
         }
         else if (WorldRendererUtility.WorldRenderedNow && colonist.IsCaravanMember() &&
                  Find.WorldSelector.IsSelected(colonist.GetCaravan()))
         {
             Main.drawCaravanSelectionOverlayOnGUIMethod.Invoke(__instance,
-                new object[] { colonist.GetCaravan(), rect2 });
+                [colonist.GetCaravan(), rect2]);
         }
 
         var pawnTexturePosition = __instance.GetPawnTextureRect(new Vector2(rect.x, rect.y));
@@ -163,7 +164,7 @@ public class ColonistBarColonistDrawer_DrawColonist_Patch
             Rot4.South,
             ColonistBarColonistDrawer.PawnTextureCameraOffset, 1.28205f));
         GUI.color = new Color(1f, 1f, 1f, entryRectAlpha * 0.8f);
-        Main.drawIconsMethod.Invoke(__instance, new object[] { rect, colonist });
+        Main.drawIconsMethod.Invoke(__instance, [rect, colonist]);
         GUI.color = color;
 
         if (colonist.Dead)

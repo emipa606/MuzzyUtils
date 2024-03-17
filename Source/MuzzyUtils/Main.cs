@@ -53,13 +53,13 @@ public class Main
         harmony.PatchAll(Assembly.GetExecutingAssembly());
 
         drawSelectionOverlayOnGUIMethod = typeof(ColonistBarColonistDrawer).GetMethod("DrawSelectionOverlayOnGUI",
-            BindingFlags.Instance | BindingFlags.NonPublic, null, new[] { typeof(Pawn), typeof(Rect) }, null);
+            BindingFlags.Instance | BindingFlags.NonPublic, null, [typeof(Pawn), typeof(Rect)], null);
         drawCaravanSelectionOverlayOnGUIMethod = typeof(ColonistBarColonistDrawer).GetMethod(
             "DrawCaravanSelectionOverlayOnGUI",
-            BindingFlags.Instance | BindingFlags.NonPublic, null, new[] { typeof(Caravan), typeof(Rect) }, null);
+            BindingFlags.Instance | BindingFlags.NonPublic, null, [typeof(Caravan), typeof(Rect)], null);
         drawIconsMethod = typeof(ColonistBarColonistDrawer).GetMethod("DrawIcons",
             BindingFlags.Instance | BindingFlags.NonPublic,
-            null, new[] { typeof(Rect), typeof(Pawn) }, null);
+            null, [typeof(Rect), typeof(Pawn)], null);
         deadColonistTexField = typeof(ColonistBarColonistDrawer).GetField("DeadColonistTex",
             BindingFlags.Static | BindingFlags.NonPublic);
         pawnLabelsCacheField = typeof(ColonistBarColonistDrawer).GetField("pawnLabelsCache",
